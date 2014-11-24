@@ -1,0 +1,19 @@
+{
+  "name": "itslrn",
+  "version": "0.1.0",
+  "description": "CLI for manageing files on ItsLearning",
+  "main": "itslrn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "asdf?"
+  },
+  "author": "Rasmus Wriedt Larsen",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.8.4",
+    "path": "^0.4.9"
+  }
+}

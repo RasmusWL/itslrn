@@ -1,0 +1,3 @@
+[submodule "include/casperjs"]
+	path = include/casperjs
+	url = git@github.com:n1k0/casperjs.git
