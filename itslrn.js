@@ -376,7 +376,15 @@ function TA_downloadInfoFromEssay(essayID, personInfo) {
             dlLinks = casper.getElementsInfo(dlLinkSelector);
         }
 
-
+        var htmlAnswerSel = 'div.essay-answer-text';
+        var answerPath = path.join(basePersonPath, 'student_answer.html');
+        if (casper.exists(htmlAnswerSel)) {
+            var answer = casper.getElementInfo(htmlAnswerSel).html;
+            var answerHtml = '<html><head></head><body>' + answer + '</body></html>';
+            fs.write(answerPath, answerHtml);
+        } else if ( casper.exists(answerPath) ) {
+            fs.remove(answerPath);
+        }
 
         // if duplicates, the most recent is the lowest in the listing
         dlLinks.map(function(link){
